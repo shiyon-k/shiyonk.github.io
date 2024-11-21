@@ -1,0 +1,324 @@
+/* Basic reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  height: 100vh;
+  color: #333;
+  background-color: #333;
+}
+/* Layout */
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+}
+/* Sidebar */
+.sidebar {
+  background-color: #333;
+  width: 280px;
+  padding: 30px;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border-radius: 0 15px 15px 0;
+  height: 100%; /* Ensure the sidebar takes full height */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+.sidebar h1 {
+  font-size: 29px;
+  font-weight: 750;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+}
+.user-profile {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.user-profile img {
+  width: 55px;
+  height: 55px;
+  border-radius: 10%;
+  margin-right: 15px;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  margin: 1px 0;
+}
+nav ul li a {
+  color: #ddd;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #6200ea;
+}
+/* Sidebar Button Enhancements */
+.filter-btn {
+  background: #fff;
+  border: 2px solid #6200ea;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #555;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+.filter-btn:hover {
+  background-color: #6200ea;
+  color: #fff;
+  transform: scale(1.05);
+}
+/* Main Content */
+main {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #a18aff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px #3700b3;
+  overflow-y: auto;
+  height: 100%; /* Ensure the sidebar takes full height */
+  overflow-y: auto;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h2 {
+  font-size: 24px;
+  font-weight: 750;
+  color: #333;
+}
+/* New Task Input Field */
+#new-task-name {
+  flex-grow: 2;
+  padding: 12px;
+  margin-right: 15px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+#new-task-name:focus {
+  border-color: #6200ea;
+}
+#add-task {
+  padding: 12px 20px;
+  background-color: #6200ea;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#add-task:hover {
+  background-color: #3700b3;
+  transform: translateY(-2px);
+}
+#task-creation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#task-date, #task-category {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+#task-date:focus, #task-category:focus {
+  border-color: #6200ea;
+}
+/* Task List */
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+.task-item:hover {
+  background-color: #f1f1f1;
+}
+.task-item label {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #555;
+}
+.task-item input[type="checkbox"] {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+.task-item input[type="checkbox"]:checked {
+  background-color: #6200ea;
+  border-color: #6200ea;
+}
+.task-item input[type="checkbox"]:hover {
+  transform: scale(1.1);
+}
+/* Sidebar: Scheduled Tasks and Settings Buttons */
+.sidebar button {
+  background-color: #6200ea;
+  padding: 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 12px;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 100%;
+  cursor: pointer;
+}
+.sidebar button:hover {
+  background-color: #3700b3;
+  transform: translateY(-2px);
+}
+/* Add Filter Button */
+#add-filter {
+  background-color: #03dac6;
+  border: none;
+  padding: 10px 18px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 25px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#add-filter:hover {
+  background-color: #018786;
+  transform: translateY(-2px);
+}
+/* Scheduled Tasks Button */
+#scheduled-tasks {
+  background-color: #ff4081;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 20px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#scheduled-tasks:hover {
+  background-color: #c60055;
+  transform: translateY(-2px);
+}
+/* Settings Button */
+#settings {
+  background-color: #6200ea;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 15px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#settings:hover {
+  background-color: #3700b3;
+  transform: translateY(-2px);
+}
+/* Add Filter Form */
+.add-filter-form {
+  margin-top: 20px;
+}
+.add-filter-form input {
+  padding: 10px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.add-filter-form button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.add-filter-form button:hover {
+  transform: scale(1.05);
+}
+/* Style for filter buttons */
+.filter-btn {
+  position: relative;
+  padding-right: 30px; /* Space for the delete icon */
+}
+/* Delete icon */
+/* Style for the delete filter button */
+button.delete-filter {
+  background-color: #ff0000;  /* Red background for delete button */
+  padding: 12px;
+  color: #fff;               /* White text color */
+  border: none;              /* Remove border */
+  padding: 10px 10px;         /* Add padding */
+  border-radius: 8px;        /* Round the corners */
+  cursor: pointer;          /* Pointer cursor on hover */
+  font-size: 14px;           /* Set the font size */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+/* Hover state for delete button */
+button.delete-filter:hover {
+  background-color: #d10000;  /* Darker red on hover */
+  transform: scale(1.1);       /* Slightly enlarge on hover */
+}
+/* Show delete icon on hover */
+.filter-btn:hover .delete-icon {
+  display: block;
+}
+#live-date-time {
+  font-size: 18px;
+  margin-left: 15px; /* Space from the "Do It" text */
+  color: #ffffff;   /* White color for visibility */
+  font-weight: 400; /* Normal font weight */
+}
+/* Target the sidebar specifically */
+.sidebar {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #2a0357b7 #474d48; /* Thumb and track colors for Firefox */
+}
+.settings-page {
+  padding: 20px;
+}
+
+.settings-page h2 {
+  margin-bottom: 20px;
+}
+
+.settings-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.settings-page label {
+  font-weight: bold;
+}
+
+.settings-page select, .settings-page button {
+  padding: 8px;
+  font-size: 14px;
+}
