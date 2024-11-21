@@ -1,8 +1,8 @@
 Hello, 
 
 
-To-Do List Application
-
+TO-DO-LIST APPLICATION
+-----------------------
 
 
 OVERVIEW
