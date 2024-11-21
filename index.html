@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h1>To-Do <span id="live-date-time"></span></h1>
+      <div class="user-profile">
+        <img src="profilepic.png" alt="User Profile">
+        <h2>SHIYON K</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><button class="filter-btn" data-filter="all">Today Tasks</button></li>
+          <li><button class="filter-btn" data-filter="personal">Personal<span class="delete-icon"></span></button></li>
+          <li><button class="filter-btn" data-filter="freelance">Freelance<span class="delete-icon"></span></button></li>
+          <li><button class="filter-btn" data-filter="work">Work<span class="delete-icon"></span></button></li>
+          <li><button id="add-filter" class="filter-btn">Add Filter</button></li>
+          <!-- Add Filter Form -->
+          <div id="add-filter-form" class="add-filter-form" style="display: none;">
+            <input type="text" id="new-filter-name" placeholder="Enter new filter name">
+            <button id="save-filter">Save</button>
+            <button id="cancel-filter">Cancel</button>
+          </div>
+        </ul>
+      </nav>
+      <button id="scheduled-tasks">Scheduled Tasks</button>
+      <button id="settings">Settings</button>
+    </aside>
+    <main>
+      <header>
+        <h2 id="main-focus">Today's Tasks</h2>
+        <!-- Task Input Section -->
+        <div id="task-creation">
+          <input type="text" id="new-task-name" placeholder="Task name">
+          <input type="date" id="task-date" placeholder="Due Date">
+          <select id="task-category">
+            <option value="" disabled selected>Select Category</option>| Thu, 21 Nov, 2024 09:33:32 am
+            User Profile
+            Sidharth
+            <option value="personal">Personal</option>
+            <option value="freelance">Freelance</option>
+            <option value="work">Work</option>
+          </select>
+          <button id="add-task">Add Task</button>
+        </div>
+      </header>
+      <ul id="task-list"></ul>
+    </main>        
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
